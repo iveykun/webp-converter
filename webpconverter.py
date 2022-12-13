@@ -12,11 +12,11 @@ for item in glob.iglob(savelocation + r'/*.webp'):
     #open and convert to RGB
     im = Image.open(item).convert("RGB")
     # new unique name for the picture
-    name = savelocation + x.strftime("%f")+str(counter) + ".png"
+    name = savelocation + '/' + x.strftime("%f")+str(counter) + ".png"
     counter = counter+1
     #print("New:")
     print(name)
     im.save(name,"png")
     #delete the original webp
-    os.remove(item)
+    #os.remove(item)
     print("--------")
