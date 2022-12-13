@@ -3,10 +3,10 @@ import os
 import glob
 import datetime
 counter=924
-savelocation = "C:/Users/yukev/Documents/"
+savelocation = os.getcwd()
 x = datetime.datetime.now()
 # for every item in this folder that ends with .webp
-for item in glob.iglob(r'C:/Users/yukev/Documents/*.webp'):
+for item in glob.iglob(savelocation + r'/*.webp'):
     print("Original:")
     #print(item)
     #open and convert to RGB
